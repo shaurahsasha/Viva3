@@ -2,7 +2,7 @@
 
 WIX1002 Fundamentals of Programming
 
-Semester 2023/2024
+Semester I 2023/2024
 
 Group Assignment Viva 2
 
