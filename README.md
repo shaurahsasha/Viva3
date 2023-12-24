@@ -1,6 +1,6 @@
 # Viva3
 
-WIX1002 Fundamentalas of Programming
+WIX1002 Fundamentals of Programming
 
 Semester 2023/2024
 
