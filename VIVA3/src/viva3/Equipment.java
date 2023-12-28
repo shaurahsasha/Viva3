@@ -9,45 +9,28 @@ package VIVA3;
  * @author SILVIA EVAFARINA
  */
 public class Equipment {
+    private Equipment[] equipmentItems;
     
-    //instances
-    private Flashlight flashlight;
-    private CloseDoor closeDoor;
-
-    public Equipment(Flashlight flashlight, CloseDoor closeDoor){
-        this.flashlight=flashlight;
-        this.closeDoor=closeDoor;
-    }    
-
+    public Equipment[] createEquipment(Flashlight f, CloseDoor c){
+        equipmentItems = new Equipment[]{f,c};
+        return equipmentItems;
+    }
+    
     public void equipmentList(){
-        System.out.println("Equipment List:");
-        System.out.println("Flashlight Battery: " +flashlight.getBattery());
-        System.out.println("CloseDoor: " +closeDoor.getDoorUses());
-    }    
-
-    public boolean useEquipment(String equipmentName, Monster monster){
-        if(equipmentName.equals("Flashlight")){
-            int batteryReduction = monster.getBatteryReduction();
-            int currentBattery = flashlight.getBattery();
-            if(currentBattery >= batteryReduction){
-                flashlight.reduceBattery(batteryReduction);
-                return true;
-            }else{
-                System.out.println("Not enough battery for flashlight!");
-                return false;
-        else if(equipmentName.equals("CloseDoor"){
-            int doorUses = closeDoor.getDoorUses();
-            if(doorUses > 0){
-                closeDoor.reduceDoorUses();
-                return true;
-            }else{
-                "System.out.println("No more door uses left!");
-                return false;
+        if (equipmentItems != null && equipmentItems.length>0){
+            for(Equipment item : equipmentItems){
+                if (item instanceof Flashlight){
+                    Flashlight flashlight = (Flashlight) item;
+                    System.out.println(flashlight.getName()+ ":Remaining battery life - " + flashlight.getBattery()); 
+                }else if (item instanceof CloseDoor){
+                    CloseDoor closeDoor = (CloseDoor) item;
+                    System.out.println(closeDoor.getName()+ ":Uses -" +closeDoor.getUses());
+                }
             }
         }else{
-            System.out.println("Invalid equipment name!");
-            return false;
+            System.out.println("No equipment available.");
         }
-    }    
+    }
+
    
 }
