@@ -9,15 +9,15 @@ package VIVA3;
  * @author SILVIA EVAFARINA
  */
 public class CloseDoor {
-    
+
     private String name;
+
+    public CloseDoor(){
+        this.name= "CloseDoor";
+    }
     
     public String getName(){
-        this.name= "CloseDoor";
-        
         return name;
-        
-        
     }
 
 }
