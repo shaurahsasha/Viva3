@@ -8,7 +8,7 @@ package VIVA3;
  *
  * @author SILVIA EVAFARINA
  */
-public class CloseDoor {
+public class CloseDoor extends Equipment{
 
     private String name;
     private int doorUses;
