@@ -11,13 +11,18 @@ package VIVA3;
 public class CloseDoor {
 
     private String name;
+    private int doorUses;
 
     public CloseDoor(){
         this.name= "CloseDoor";
+        this.doorUses = 50;
     }
     
     public String getName(){
-        return name;
+        return this.name;
+    }
+    public int getDoorUses(){
+        return this.doorUses;
     }
 
 }
