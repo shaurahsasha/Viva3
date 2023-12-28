@@ -8,7 +8,7 @@ package VIVA3;
  *
  * @author SILVIA EVAFARINA
  */
-public class Flashlight {
+public class Flashlight extends Equipment {
     
     private String name;
     private int battery;
