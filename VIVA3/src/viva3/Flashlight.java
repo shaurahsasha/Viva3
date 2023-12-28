@@ -11,15 +11,20 @@ package VIVA3;
 public class Flashlight {
     
     private String name;
+    private int battery;
     
     public Flashlight(){
         this.name= "Flashlight";
+        this.battery = 100;
     }
     
     public String getName(){
-        return name;
-        
+        return this.name;
     }
+    public int getBattery(){
+        return this.battery;
+    }
+        
     
     
 }
